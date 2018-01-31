@@ -23,7 +23,8 @@ const row = (props) => {
         );
     });
     return (
-        <div className='Row'>
+        <div 
+         className='Row'>
             {cells}
         </div>
     );

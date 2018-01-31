@@ -1,14 +1,37 @@
+.Container {
+    display: block;
+}
 .Board {
-    height: 500px;
-    width: 500px;
-    margin: 20px auto;
+    height: 650px;
+    width: 900px;
+    margin: 20px auto 0px auto;
     background: #222222;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    @media (max-width: 550px), (max-height: 550px) {
+        height: 180px;
+        width: 250px;
+    }
+}
 
+.Counter {
+    border: 1px solid #22ff22;
+    width: 100px;
+    height: 35px;
+    background: #000000;
+    color: #ffffff;
+    margin: 0px auto 15px auto;
+    font-weight: bold;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding-top: 3px;
+    @media (max-width: 550px), (max-height: 550px) {
+        font-size: 16px;
+        padding-top: 7px;
+    }
 }
 
 .Row { 
@@ -28,3 +51,70 @@
 .Old {
     background: #22ee22;
 }
+
+.Controls {
+    width: 55%;
+    margin: 0px auto 10px;
+    border: 3px solid #22ff22;
+    box-sizing: border-box;
+    @media (max-width: 550px), (max-height: 550px) {
+        width: 100%;
+        margin: 0;
+    }
+    .Start {
+        width: 100%;
+        border: none;
+        font-size: 30px;
+        background: #222222;
+        color: #22ff22;
+        &:hover {
+            color: #eeeeee;
+            font-size: 36px;
+            font-weight: bold;
+            background: #111111;
+        }
+    }
+    .Size {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background: #1d1d1d;
+        button {
+            width: 33%;
+            border: none;
+            background: none;
+            padding: 5px;
+            color: #77ff77;
+            font-size: 20px;
+            &:hover {
+                color: #efefef;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+    .Randomizer {
+        width: 50%;
+        border: none;
+        font-size: 18px;
+        background: #222222;
+        color: #22ff22;
+            &:hover {
+                color: #efefef;
+                font-size: 20px;
+                font-weight: bold;
+                background: #111111;
+            }
+    }
+    .Speed {
+        width: 50%;
+        border: 1px solid #22ff22;
+        background: #222222;
+        color: #efefef;
+        font-size: 16px;
+    }
+}
+
